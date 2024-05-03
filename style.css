@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container h1{
+    font-size: 28px;
+}
+.list{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 1294.25px;
+    height: 682px;
+    border: 1px solid black;
+    margin: auto;
+}
+/* .list-item{
+    border-radius: 4px;
+    width: 180px;
+    height: 270px;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+.list-item:hover.{
+    width: 220px;
+    height: 390px;
+    transition: 500ms;
+} */
+.img{
+    width: 40%;
+    height: 40%;
+    margin-left: 25%;
+}
+.price{
+    font-size: 16px;
+    line-height: 124%;
+    margin-left: 8.5px;
+    margin-top: 19.5px;
+    font-family: sans-serif;
+}
+.title{
+    font-size: 12px;
+    line-height: 124%;
+    margin-left: 8.5px;
+    margin-top: 11px;
+}
+.rating{
+    display: flex;
+    margin-left: 8.5px;
+    margin-top: 11.75px;
+    font-family: sans-serif;
+}
+.rate i{
+    color: blue;
+}
+.count{
+    margin-left: 10px;
+}
+.btn{
+    margin-top: 10px;
+    width: 180px;
+    height: 34px;
+    background-image: linear-gradient(to right, 0% #F64D4D, 100% #4D5EF6);
+}
+.cont{
+    border-radius: 4px;
+    width: 180px;
+    height: 270px;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+.cont:hover{
+    background-color: #ffff;
+    position: absolute;
+    z-index: 5;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.12);
+    width: 220px;
+    height: 390px;
+    transition: 500ms;
+}
