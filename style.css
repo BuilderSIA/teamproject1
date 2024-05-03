@@ -10,6 +10,7 @@
     grid-template-columns: auto auto auto auto auto auto;
     width: 1294.25px;
     height: 682px;
+<<<<<<< HEAD
     margin: auto;
     margin-left: 50px;
 }
@@ -17,6 +18,23 @@
     position: relative;
     margin-top: 50px;
 }
+=======
+    border: 1px solid black;
+    margin: auto;
+}
+/* .list-item{
+    border-radius: 4px;
+    width: 180px;
+    height: 270px;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+.list-item:hover.{
+    width: 220px;
+    height: 390px;
+    transition: 500ms;
+} */
+>>>>>>> af4b01a (birinchisi)
 .img{
     width: 40%;
     height: 40%;
@@ -40,7 +58,10 @@
     margin-left: 8.5px;
     margin-top: 11.75px;
     font-family: sans-serif;
+<<<<<<< HEAD
     display: none;
+=======
+>>>>>>> af4b01a (birinchisi)
 }
 .rate i{
     color: blue;
@@ -49,18 +70,30 @@
     margin-left: 10px;
 }
 .btn{
+<<<<<<< HEAD
     display: none;
+=======
+    margin-top: 10px;
+    width: 180px;
+    height: 34px;
+    background-image: linear-gradient(to right, 0% #F64D4D, 100% #4D5EF6);
+>>>>>>> af4b01a (birinchisi)
 }
 .cont{
     border-radius: 4px;
     width: 180px;
     height: 270px;
+<<<<<<< HEAD
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.20);
+=======
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.12);
+>>>>>>> af4b01a (birinchisi)
     background: #fff;
 }
 .cont:hover{
     background-color: #ffff;
     position: absolute;
+<<<<<<< HEAD
     z-index: 1;
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.20);
     width: 210px;
@@ -85,4 +118,11 @@
         font-family: sans-serif;
         transition: 1s;
     }
+=======
+    z-index: 5;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.12);
+    width: 220px;
+    height: 390px;
+    transition: 500ms;
+>>>>>>> af4b01a (birinchisi)
 }
