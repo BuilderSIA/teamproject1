@@ -3,10 +3,14 @@ const electronics = document.getElementById('electronics');
 fetch('https://fakestoreapi.com/products/category/electronics')
     .then(res => res.json())
     .then((data) => {
+<<<<<<< HEAD
 
         let further_data = data.concat(data.concat())
 
         let cards = further_data.map((item) => {
+=======
+        let cards = data.map((item) => {
+>>>>>>> bc362b8 (big changes have been made)
             return (`
             <li class="card">
                 <div class="face main">
@@ -50,6 +54,7 @@ fetch('https://fakestoreapi.com/products/category/electronics')
         electronics.innerHTML = cards.join('')
     })
 
+<<<<<<< HEAD
 fetch('./electronics.json')
     .then(res => res.json())
     .then(json => console.log(json))
@@ -112,3 +117,8 @@ fetch('./electronics.json')
 // fetch('./jewelery.json')
 //     .then(res => res.json())
 //     .then(json => console.log(json))
+=======
+fetch('https://fakestoreapi.com/products/category/electronics')
+    .then(res => res.json())
+    .then(json => console.log(json))
+>>>>>>> bc362b8 (big changes have been made)
