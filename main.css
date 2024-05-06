@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *:not(.simulator) {
+    cursor: url(./image.png) 17 17, pointer !important;
+    scrollbar-width: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  html body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  html body .container {
+    width: 1336px;
+    margin: 0 auto;
+  }
+  html body .container button {
+    border: none;
+  }
+  html body .container button:hover {
+    cursor: pointer;
+  }
+  html body .container button:active {
+    opacity: 0.7;
+  }
+  html body .container input {
+    cursor: text;
+  }
+  html body .container a {
+    text-decoration: none;
+  }
+  html body .container a:hover {
+    cursor: pointer;
+  }
+  html body .container a:active {
+    opacity: 0.7;
+  }
+  html body .container .header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  html body .container .header .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 134px;
+  }
+  html body .container .header .navbar .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  html body .container .header .navbar .nav a {
+    color: black;
+  }
+  html body .container .header .navbar .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  html body .container .header .navbar .content .directory button {
+    width: 77px;
+    height: 77px;
+    background: linear-gradient(96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .container .header .navbar .content .logo a {
+    display: block;
+    width: 188px;
+    height: 63.1px;
+  }
+  html body .container .header .navbar .content .logo a img {
+    width: 188px;
+    height: 63.1px;
+  }
+  html body .container .header .navbar .content .search {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 8px;
+    background: #f6f6f6;
+    transition: box-shadow 0.25s;
+  }
+  html body .container .header .navbar .content .search:focus-within {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+  }
+  html body .container .header .navbar .content .search-input {
+    font-size: 16px;
+    font-family: "Lexend", sans-serif;
+    color: #333333;
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+  }
+  html body .container .header .navbar .content .icons {
+    width: 268px;
+    height: 49px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  html body .container .header .navbar .content .icons .icon button {
+    height: 48.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
+  }
+  html body .container .main {
+    position: relative;
+    top: 20px;
+    /*#jewelery {
+        // zoom: 1.2;
+        margin: 0 auto;
+        width: 600px;
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 10px;
+  
+        .card {
+            // max-width: 181px;
+            // max-height: 300px;
+            position: relative;
+            margin-left: 9px;
+            margin-right: 9px;
+            list-style-type: none;
+            border-radius: 4px;
+            background: white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 10px;
+  
+            .face {
+                position: relative;
+                width: 100%;
+                max-width: 300px;
+                height: 90px;
+                transition: 0.7s;
+                border-radius: 4px;
+  
+                &.main {
+                    position: relative;
+                    background: #fff;
+                    z-index: 1;
+                    transform: translateY(0px);
+                    height: 260px;
+  
+                    .item-img {
+                        img {
+                            height: 160px;
+                            width: 160px;
+                        }
+                    }
+  
+                    .card-price {
+                        width: 60px;
+                        height: 39px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 39.2px;
+                        text-align: left;
+                    }
+  
+                    .card-title {
+                        font-size: 12px;
+                        text-align: left;
+                        font-weight: 100;
+                    }
+                }
+            }
+  
+            &:hover .face.main {
+                transform: translateY(0);
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+  
+            .face.main .content {
+                opacity: 0.8;
+                transition: 0.5s;
+            }
+  
+            &:hover .face.main .content {
+                opacity: 1;
+            }
+  
+            .face {
+                &.main .content {
+                    img {
+                        max-width: 60px;
+                    }
+  
+                    h3 {
+                        margin: 10px 0 0;
+                        padding: 0;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 1.5em;
+                    }
+                }
+  
+                &.extra {
+                    position: relative;
+                    background: #fff;
+                    box-sizing: border-box;
+                    transform: translateY(-100px);
+                }
+            }
+  
+            &:hover .face.extra {
+                transform: translateY(30px);
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                z-index: 1;
+                height: 60px;
+            }
+  
+            .face.extra {
+                b {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 5px;
+                    font-size: 12px;
+                    width: 80px;
+  
+                    span {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+  
+                        p {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+  
+                .btn-cart {
+                    width: 180px;
+                    height: 34px;
+                    margin-top: 5px;
+                    color: black;
+                    background-color: white;
+                    border-image-source: $main_linear-gradient;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-image-slice: 1;
+  
+                    &:hover {
+                        color: white;
+                        background: $main_linear-gradient;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }*/
+  }
+  html body .container .main #electronics {
+    width: 1400px;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  html body .container .main #electronics .card {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+    list-style-type: none;
+    border-radius: 4px;
+    background: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+  }
+  html body .container .main #electronics .card .face {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 90px;
+    transition: 0.7s;
+    border-radius: 4px;
+  }
+  html body .container .main #electronics .card .face.main {
+    position: relative;
+    background: #fff;
+    z-index: 1;
+    transform: translateY(0px);
+    height: 260px;
+  }
+  html body .container .main #electronics .card .face.main .item-img img {
+    height: 160px;
+    width: 160px;
+  }
+  html body .container .main #electronics .card .face.main .card-price {
+    width: 60px;
+    height: 39px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 39.2px;
+    text-align: left;
+  }
+  html body .container .main #electronics .card .face.main .card-title {
+    font-size: 12px;
+    text-align: left;
+    font-weight: 100;
+  }
+  html body .container .main #electronics .card:hover .face.main {
+    transform: translateY(0);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  html body .container .main #electronics .card .face.main .content {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+  html body .container .main #electronics .card:hover .face.main .content {
+    opacity: 1;
+  }
+  html body .container .main #electronics .card .face.main .content img {
+    max-width: 60px;
+  }
+  html body .container .main #electronics .card .face.main .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  html body .container .main #electronics .card .face.extra {
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+    transform: translateY(-100px);
+  }
+  html body .container .main #electronics .card:hover .face.extra {
+    transform: translateY(30px);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 1;
+    height: 60px;
+  }
+  html body .container .main #electronics .card .face.extra b {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    width: 80px;
+  }
+  html body .container .main #electronics .card .face.extra b span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  html body .container .main #electronics .card .face.extra b span p {
+    margin-right: 5px;
+  }
+  html body .container .main #electronics .card .face.extra .btn-cart {
+    width: 180px;
+    height: 34px;
+    margin-top: 5px;
+    color: black;
+    background-color: white;
+    border-image-source: linear-gradient(96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+    border-width: 2px;
+    border-style: solid;
+    border-image-slice: 1;
+  }
+  html body .container .main #electronics .card .face.extra .btn-cart:hover {
+    color: white;
+    background: linear-gradient(96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+    border: none;
+  }
+  html body::-webkit-scrollbar {
+    height: 1rem;
+    width: 0.5rem;
+  }
+  html body::-webkit-scrollbar-thumb {
+    background-color: rgba(227, 227, 227, 0.8);
+    border-color: #ffffff;
+    border-radius: 9999px;
+    border-width: 1px;
+  }
+  html body::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 9999px;
+  }
+  
+  @media only screen and (max-width: 425px) {
+    html {
+      scroll-behavior: smooth;
+    }
+    html body {
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    html body .container {
+      width: 425px;
+      margin: 0 auto;
+    }
+    html body .container button {
+      border: none;
+    }
+    html body .container button:hover {
+      cursor: pointer;
+    }
+    html body .container button:active {
+      opacity: 0.7;
+    }
+    html body .container input {
+      cursor: text;
+    }
+    html body .container a {
+      text-decoration: none;
+    }
+    html body .container a:hover {
+      cursor: pointer;
+    }
+    html body .container a:active {
+      opacity: 0.7;
+    }
+    html body .container .header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    html body .container .header .navbar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: white;
+      height: 30px;
+    }
+    html body .container .header .navbar .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+      font-size: 5px;
+      width: 250px;
+      margin: 5px auto;
+    }
+    html body .container .header .navbar .nav a {
+      color: black;
+    }
+    html body .container .header .navbar .content {
+      display: flex;
+      align-items: center;
+      width: 80%;
+    }
+    html body .container .header .navbar .content .directory {
+      display: none;
+    }
+    html body .container .header .navbar .content .directory button {
+      width: 77px;
+      height: 77px;
+      background: linear-gradient(96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    html body .container .header .navbar .content .logo a {
+      display: block;
+      width: 45px;
+      height: 15px;
+      padding: 0 12px;
+    }
+    html body .container .header .navbar .content .logo a img {
+      width: 45px;
+      height: 15px;
+    }
+    html body .container .header .navbar .content .search {
+      width: 156px;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      border-radius: 8px;
+      background: #f6f6f6;
+      transition: box-shadow 0.25s;
+    }
+    html body .container .header .navbar .content .search:focus-within {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+    }
+    html body .container .header .navbar .content .search-input {
+      font-size: 4px;
+      font-family: "Lexend", sans-serif;
+      color: #333333;
+      outline: none;
+      border: none;
+      background: transparent;
+      flex: 1;
+    }
+    html body .container .header .navbar .content .search-icon {
+      font-size: 6px;
+    }
+    html body .container .header .navbar .content .icons {
+      background-color: white;
+      width: 100px;
+      height: 20px;
+    }
+    html body .container .header .navbar .content .icons .icon button {
+      zoom: 0.3;
+    }
+    html body .container .main {
+      position: relative;
+      top: 20px;
+    }
+    html body .container .main #electronics {
+      width: 400px;
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: repeat(3, 1fr);
+      zoom: 0.5;
+    }
+    html body .container .main #electronics .card {
+      position: relative;
+      margin-left: 5px;
+      margin-right: 5px;
+      list-style-type: none;
+      border-radius: 4px;
+      background: white;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 10px;
+    }
+    html body .container .main #electronics .card .face {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      height: 90px;
+      transition: 0.7s;
+      border-radius: 4px;
+    }
+    html body .container .main #electronics .card .face.main {
+      position: relative;
+      background: #fff;
+      z-index: 1;
+      transform: translateY(0px);
+      height: 260px;
+    }
+    html body .container .main #electronics .card .face.main .item-img img {
+      height: 160px;
+      width: 160px;
+    }
+    html body .container .main #electronics .card .face.main .card-price {
+      width: 60px;
+      height: 39px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 39.2px;
+      text-align: left;
+    }
+    html body .container .main #electronics .card .face.main .card-title {
+      font-size: 12px;
+      text-align: left;
+      font-weight: 100;
+    }
+    html body .container .main #electronics .card:hover .face.main {
+      transform: translateY(0);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    html body .container .main #electronics .card .face.main .content {
+      opacity: 0.8;
+      transition: 0.5s;
+    }
+    html body .container .main #electronics .card:hover .face.main .content {
+      opacity: 1;
+    }
+    html body .container .main #electronics .card .face.main .content img {
+      max-width: 60px;
+    }
+    html body .container .main #electronics .card .face.main .content h3 {
+      margin: 10px 0 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    html body .container .main #electronics .card .face.extra {
+      position: relative;
+      background: #fff;
+      box-sizing: border-box;
+      transform: translateY(-100px);
+    }
+    html body .container .main #electronics .card:hover .face.extra {
+      transform: translateY(30px);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      z-index: 1;
+      height: 60px;
+    }
+    html body .container .main #electronics .card .face.extra b {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      width: 80px;
+    }
+    html body .container .main #electronics .card .face.extra b span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    html body .container .main #electronics .card .face.extra b span p {
+      margin-right: 5px;
+    }
+    html body .container .main #electronics .card .face.extra .btn-cart {
+      width: 180px;
+      height: 34px;
+      margin-top: 5px;
+      color: black;
+      background-color: white;
+      border-image-source: linear-gradient(96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+      border-width: 2px;
+      border-style: solid;
+      border-image-slice: 1;
+    }
+    html body .container .main #electronics .card .face.extra .btn-cart:hover {
+      color: white;
+      background: linear-gradient(96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+      border: none;
+    }
+    html body::-webkit-scrollbar {
+      height: 1rem;
+      width: 0.15rem;
+    }
+    html body::-webkit-scrollbar-thumb {
+      background-color: rgba(227, 227, 227, 0.8);
+      border-color: #ffffff;
+      border-radius: 9999px;
+      border-width: 0.5px;
+    }
+    html body::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 9999px;
+    }
+  }/*# sourceMappingURL=main.css.map */
