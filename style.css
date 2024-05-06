@@ -75,4 +75,7 @@
         background: linear-gradient(96.78deg, #F64d4d -57.06%, #4d5ef6 101.17%);
         transition: 1s;
     }
+    .btn:hover{
+        color: #fff;
+    }
 }
