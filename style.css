@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7f3c1afe38f818d7471ce7a5dd1805754a1ac7dd
 *{
     margin: 0px;
     padding: 0px;
@@ -67,6 +70,7 @@
     transition: 100ms;
     z-index: 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
     box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.20);
     width: 210px;
     height: 300px;
@@ -93,6 +97,8 @@
 }
 >>>>>>> 798f33f (width of btn changed)
 =======
+=======
+>>>>>>> 7f3c1afe38f818d7471ce7a5dd1805754a1ac7dd
 }
 .btn{
     width: 85%;
@@ -115,5 +121,9 @@
     margin-left: 8.5px;
     margin-top: 11.75px;
     font-family: sans-serif;
+<<<<<<< HEAD
 }
 >>>>>>> 5cf04a7 (hoversiz ko'rinish)
+=======
+}
+>>>>>>> 7f3c1afe38f818d7471ce7a5dd1805754a1ac7dd
