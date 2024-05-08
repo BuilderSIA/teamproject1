@@ -4,6 +4,7 @@ fetch('https://fakestoreapi.com/products/category/electronics')
     .then(res => res.json())
     .then((data) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         let further_data = data.concat(data.concat())
 
@@ -11,6 +12,9 @@ fetch('https://fakestoreapi.com/products/category/electronics')
 =======
         let cards = data.map((item) => {
 >>>>>>> bc362b8 (big changes have been made)
+=======
+        let cards = data.map((item) => {
+>>>>>>> 120b4a76bfc063c56488defd27868f17460075cf
             return (`
             <li class="card">
                 <div class="face main">
@@ -54,6 +58,7 @@ fetch('https://fakestoreapi.com/products/category/electronics')
         electronics.innerHTML = cards.join('')
     })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 fetch('./electronics.json')
     .then(res => res.json())
@@ -122,3 +127,8 @@ fetch('https://fakestoreapi.com/products/category/electronics')
     .then(res => res.json())
     .then(json => console.log(json))
 >>>>>>> bc362b8 (big changes have been made)
+=======
+fetch('https://fakestoreapi.com/products/category/electronics')
+    .then(res => res.json())
+    .then(json => console.log(json))
+>>>>>>> 120b4a76bfc063c56488defd27868f17460075cf
