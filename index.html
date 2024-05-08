@@ -1,14 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlaceMik done</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
-    <h2>
-        Hello world!!!
-    </h2>
+    <div class="container">
+        <div class="header">
+            <div class="navbar">
+                <div class="top">
+                    <div class="directory">
+                        <button>
+                        </button>
+                    </div>
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="https://i.ibb.co/nwsmvKX/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input class="search-input" type="search" placeholder="Search" />
+                        <span class="search-icon material-symbols-outlined">search</span>
+                    </div>
+                    <div class="icons">
+                        <div class="icon">
+                            <button>
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.1998 7.28C20.1998 11.3006 16.9404 14.56 12.9198 14.56C8.89916 14.56 5.6398 11.3006 5.6398 7.28C5.6398 3.25937 8.89916 0 12.9198 0C16.9404 0 20.1998 3.25937 20.1998 7.28ZM7.387 7.28C7.387 10.3357 9.86411 12.8128 12.9198 12.8128C15.9755 12.8128 18.4526 10.3357 18.4526 7.28C18.4526 4.22432 15.9755 1.7472 12.9198 1.7472C9.86411 1.7472 7.387 4.22432 7.387 7.28Z"
+                                        fill="black" style="fill:black;fill-opacity:1;" />
+                                    <path
+                                        d="M23.84 26C23.84 24.566 23.5575 23.146 23.0088 21.8211C22.46 20.4962 21.6556 19.2924 20.6416 18.2784C19.6276 17.2644 18.4238 16.46 17.0989 15.9112C15.774 15.3625 14.354 15.08 12.92 15.08C11.486 15.08 10.066 15.3625 8.74109 15.9112C7.41622 16.46 6.21241 17.2644 5.19839 18.2784C4.18438 19.2924 3.38002 20.4962 2.83123 21.8211C2.28245 23.146 2 24.566 2 26H3.74395C3.74395 24.795 3.9813 23.6018 4.44243 22.4885C4.90357 21.3752 5.57948 20.3636 6.43155 19.5116C7.28363 18.6595 8.29519 17.9836 9.40848 17.5224C10.5218 17.0613 11.715 16.8239 12.92 16.8239C14.125 16.8239 15.3182 17.0613 16.4315 17.5224C17.5448 17.9836 18.5564 18.6595 19.4084 19.5116C20.2605 20.3636 20.9364 21.3752 21.3976 22.4885C21.8587 23.6018 22.096 24.795 22.096 26H23.84Z"
+                                        fill="black" style="fill:black;fill-opacity:1;" />
+                                </svg>
+                                Sign in
+                            </button>
+                        </div>
+                        <div class="icon">
+                            <button>
+                                <svg width="28" height="26" viewBox="0 0 28 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_111_11222)">
+                                        <path
+                                            d="M7.62209 2.3022C10.0596 2.57301 12.0907 4.33343 13.9865 6.63554C15.8824 4.33343 18.0624 2.3022 20.7707 2.3022C24.2916 2.3022 25.8973 5.49676 25.4969 8.21286C25.0907 10.9689 24.0205 11.3751 19.2679 17.1981L14.6638 22.6147C13.7658 23.5713 14.2075 23.5713 13.3096 22.6147L11.6846 20.5835L10.3303 18.9584L8.84085 17.1981C3.84347 11.3751 2.68496 9.88554 2.48926 8.21286C2.08291 4.73972 4.38518 1.94257 7.62209 2.3022Z"
+                                            fill="url(#paint0_linear_111_11222)" />
+                                        <path
+                                            d="M20.7709 0.258301C17.95 0.258301 15.8155 1.91379 14 3.64372C12.2701 1.80798 10.0501 0.258301 7.22921 0.258301C3.25641 0.258301 0.458374 3.67416 0.458374 7.39901C0.458374 9.39724 1.2768 10.8369 2.17308 12.1885L12.6958 24.8043C13.8773 26.0543 14.0999 26.0543 15.2814 24.8043L25.8278 12.1885C26.8815 10.8369 27.5417 9.39724 27.5417 7.39901C27.5417 3.67421 24.7436 0.258301 20.7709 0.258301ZM24.1563 11.8382L14 23.9562L3.84379 11.7882C2.62929 10.0997 2.15108 8.96055 2.15108 7.39901C2.15108 4.48923 4.22889 1.86976 7.22921 1.8452C9.6972 1.82489 12.4944 4.34532 14 6.2454C15.4659 4.41134 18.3029 1.8452 20.7709 1.8452C23.6916 1.8452 25.849 4.48923 25.849 7.39901C25.849 8.96055 25.4707 10.1843 24.1563 11.8382Z"
+                                            fill="black" style="fill:black;fill-opacity:1;" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_111_11222" x1="-10.4145" y1="-12.3548"
+                                            x2="29.8289" y2="-7.10721" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F64D4D"
+                                                style="stop-color:#F64D4D;stop-color:color(display-p3 0.9647 0.3020 0.3020);stop-opacity:1;" />
+                                            <stop offset="1" stop-color="#4D5EF6"
+                                                style="stop-color:#4D5EF6;stop-color:color(display-p3 0.3020 0.3682 0.9647);stop-opacity:1;" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_111_11222">
+                                            <rect width="27.0833" height="26" fill="white"
+                                                style="fill:white;fill-opacity:1;" transform="translate(0.458374)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                Favorites
+                            </button>
+                        </div>
+                        <div class="icon">
+                            <button>
+                                <svg width="28" height="26" viewBox="0 0 28 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.80859 5.41699H25.5253L23.4669 13.867L5.80859 15.3837V5.41699Z"
+                                        fill="url(#paint0_linear_111_11229)" />
+                                    <path
+                                        d="M7.25 19.0667C6.31766 19.0667 5.5625 18.291 5.5625 17.3333L24.2475 15.6644C24.6789 15.6259 25.0381 15.3118 25.1415 14.8799C25.712 12.4953 27.5 4.97067 27.5 4.33333C27.5 3.85493 27.122 3.46667 26.6562 3.46667H5.5625V1.56C5.5625 0.866667 5.5625 1.34507 5.5625 0.866667C5.5625 0.388267 5.1845 0 4.71875 0L1.34375 3.09944e-07C0.878 3.09944e-07 0.5 0.388267 0.5 0.866667C0.5 1.34507 0.878 1.73333 1.34375 1.73333H3.875V17.3333C3.875 19.2478 5.38616 20.8 7.25 20.8L22.505 20.8C22.505 20.8 21.865 19.981 22.3586 20.54L22.505 20.8L20.75 19.24L7.25 19.0667ZM5.5625 5.2H25.8125L23.6551 14.0642L5.5625 15.6V5.2Z"
+                                        fill="black" style="fill:black;fill-opacity:1;" />
+                                    <path
+                                        d="M24.0406 22.62C24.0406 24.4867 22.5674 26 20.75 26C18.9326 26 17.4594 24.4867 17.4594 22.62C17.4594 20.7533 18.9326 19.24 20.75 19.24C22.5674 19.24 24.0406 20.7533 24.0406 22.62ZM19.1414 22.62C19.1414 23.5325 19.8616 24.2723 20.75 24.2723C21.6384 24.2723 22.3586 23.5325 22.3586 22.62C22.3586 21.7075 21.6384 20.9677 20.75 20.9677C19.8616 20.9677 19.1414 21.7075 19.1414 22.62Z"
+                                        fill="black" style="fill:black;fill-opacity:1;" />
+                                    <path
+                                        d="M12.1438 22.62C12.1438 24.4867 10.6705 26 8.85313 26C7.03577 26 5.5625 24.4867 5.5625 22.62C5.5625 20.7533 7.03577 19.24 8.85313 19.24C10.6705 19.24 12.1438 20.7533 12.1438 22.62ZM7.24454 22.62C7.24454 23.5325 7.96473 24.2723 8.85313 24.2723C9.74153 24.2723 10.4617 23.5325 10.4617 22.62C10.4617 21.7075 9.74153 20.9677 8.85313 20.9677C7.96473 20.9677 7.24454 21.7075 7.24454 22.62Z"
+                                        fill="black" style="fill:black;fill-opacity:1;" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_111_11229" x1="-5.1588" y1="-1.50431"
+                                            x2="27.9252" y2="6.27193" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F64D4D"
+                                                style="stop-color:#F64D4D;stop-color:color(display-p3 0.9647 0.3020 0.3020);stop-opacity:1;" />
+                                            <stop offset="1" stop-color="#4D5EF6"
+                                                style="stop-color:#4D5EF6;stop-color:color(display-p3 0.3020 0.3682 0.9647);stop-opacity:1;" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                Basket
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="#electronics">
+                        Electronic Equipment
+                    </a>
+                    <a href="#men'sclothing">
+                        Men's clothing
+                    </a>
+                    <a href="#women'sclothing">
+                        Women's clothing
+                    </a>
+                    <a href="#jewelery">
+                        Jewelery
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div id="electronics">
+
+            </div>
+            <div id="jewelery">
+                
+            </div>
+        </div>
+    </div>
+    <script src="./main.js">
+        /*const zoom = document.body.style.zoom;
+        if(innerWidth < 768){
+            zoom = innerWidth / 768;
+        } else{
+            document.body.style.zoom = innerWidth / 1336;
+        }*/
+    </script>
 </body>
+
 </html>
