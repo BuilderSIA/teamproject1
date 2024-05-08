@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  width: 1440px;
+  height: 580px;
+  margin: auto;
+}
+.list-item {
+  position: relative;
+  margin-left: 40px;
+}
+.list-item .cont {
+  border-radius: 4px;
+  width: 180px;
+  height: 270px;
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2);
+}
+.list-item .cont:hover {
+  background-color: rgb(202, 134, 184);
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 310px;
+  transition: 800ms;
+  transform: scale(1.01);
+  left: -7.5px;
+  right: -7.5px;
+}
+.list-item .cont:hover .btn {
+  display: block;
+}
+.list-item .cont .img {
+  width: 40%;
+  height: 40%;
+  margin-left: 25%;
+}
+.list-item .cont .price {
+  font-size: 16px;
+  line-height: 124%;
+  margin-left: 8.5px;
+  margin-top: 19.5px;
+  font-family: sans-serif;
+}
+.list-item .cont .rating {
+  display: flex;
+  margin-left: 8.5px;
+  margin-top: 11.75px;
+  font-family: sans-serif;
+}
+.list-item .cont .rating .rate i {
+  color: rgb(244, 15, 15);
+}
+.list-item .cont .title {
+  font-size: 12px;
+  line-height: 124%;
+  margin-left: 8.5px;
+  margin-top: 11px;
+}
+.list-item .cont .btn {
+  margin-top: 10px;
+  width: 180px;
+  height: 34px;
+  display: none;
+  border: none;
+  margin-left: 10px;
+  margin-top: 15px;
+  background-color: rgb(161, 4, 87);
+}
+.list-item .cont .btn:hover {
+  cursor: pointer;
+}
+.list-item .cont .btn:active {
+  opacity: 0.7;
+}/*# sourceMappingURL=main.css.map */
+
+.btn{
+  color: white;
+}
