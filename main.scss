@@ -193,8 +193,11 @@ html {
                         list-style-type: none;
                         border-radius: 4px;
                         background: white;
-                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                         padding: 10px;
+
+                        &:hover {
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        }
 
                         .face {
                             position: relative;
@@ -316,8 +319,6 @@ html {
                         }
                     }
                 }
-
-                #jewelery {}
             }
         }
 

@@ -160,8 +160,10 @@ html body .container .main #electronics .card {
   list-style-type: none;
   border-radius: 4px;
   background: white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 10px;
+}
+html body .container .main #electronics .card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 html body .container .main #electronics .card .face {
   position: relative;
