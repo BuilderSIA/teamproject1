@@ -4,7 +4,7 @@ fetch('https://fakestoreapi.com/products/category/electronics')
     .then(res => res.json())
     .then((data) => {
 
-        let further_data = data.concat(data.concat())
+        let further_data = data.concat(data.concat(data.concat()))
 
         let cards = further_data.map((item) => {
             return (`
@@ -40,7 +40,7 @@ fetch('https://fakestoreapi.com/products/category/electronics')
                         <p class="card-weight">${item.rating.count}</p>
                     </b>
                     <!--<p class="card-description">${item.description}</p>-->
-                    <button class="btn-cart">
+                    <button class="btn-cart" onclick="">
                         Add to cart
                     </button>
                 </div>
@@ -50,11 +50,6 @@ fetch('https://fakestoreapi.com/products/category/electronics')
         electronics.innerHTML = cards.join('')
     })
 
-fetch('./electronics.json')
+fetch('https://fakestoreapi.com/products/category/electronics')
     .then(res => res.json())
     .then(json => console.log(json))
-
-
-
-
-    
