@@ -1,35 +1,79 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [email, setEmail] = useState(0);
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h2>
+        Log In
+      </h2>
+      <div className="login_text">
+        Don't have an account?
+        <span>
+          Sign up
+        </span>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <div className="login_container">
+        <div className="login_buttons">
+          <button>
+            <div className="provider_text">
+              Google
+            </div>
+            <div className="provider_logo">
+              <img src="https://i.ibb.co/LQzDdyY/Google.png" alt="Google" />
+            </div>
+          </button>
+          <button>
+            <div className="provider_text">
+              Facebook
+            </div>
+            <div className="provider_logo">
+              <img src="https://i.ibb.co/8zRMdWP/Facebook.png" alt="Facebook" />
+            </div>
+          </button>
+          <button>
+            <div className="provider_text">
+              Github
+            </div>
+            <div className="provider_logo">
+              <img src="https://i.ibb.co/0nNGnKX/Github.png" alt="Github" />
+            </div>
+          </button>
+          <button>
+            <div className="provider_text">
+              Feide
+            </div>
+            <div className="provider_logo">
+              <img src="https://i.ibb.co/xMY6hWP/Feide.png" alt="Feide" />
+            </div>
+          </button>
+        </div>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          OR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="content">
+        <form action="">
+          <div className="inputs">
+            <input type="text" placeholder='Email' />
+            <input type={showPassword ? 'text' : 'password'} placeholder='Password' />
+            <input type="checkbox" checked={showPassword} onChange={() => setShowPassword(!showPassword)} />
+          </div>
+          <div className="buttons">
+            <button type='button'>
+              Forgot Password?
+            </button>
+            <button type='submit' className='primary'>
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
     </>
-  )
+  );
 }
 
 export default App
