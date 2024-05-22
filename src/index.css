@@ -1,0 +1,7 @@
+:root {
+    --cursorDefault: url(https://i.ibb.co/8zq5jLJ/image.png), auto;
+    --cursorPointer: url(https://i.ibb.co/WDVDck5/pointer.png), auto;
+    --cursorGrab: url(https://i.ibb.co/1bHt1pn/grab.png), auto;
+    --cursorGrabbed: url(https://i.ibb.co/YkMhF6h/grabbing.png), auto;
+    --cursorText: url(https://i.ibb.co/NTLccyn/text.png), auto;
+}

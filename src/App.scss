@@ -1,15 +1,18 @@
 * {
     user-select: none;
+    padding: 0;
+    margin: 0;
 }
 
 body {
     background-color: #282a35;
+    cursor: var(--cursorDefault);
 
     button {
         border: 1px solid #d4d1d3;
 
         &:hover {
-            cursor: pointer;
+            cursor: var(--cursorPointer);
         }
 
         &:focus {
@@ -21,7 +24,74 @@ body {
         }
     }
 
+    a {
+        text-decoration: none;
+        cursor: var(--cursorPointer);
+    }
+
+    input {
+        &:hover {
+            cursor: var(--cursorText);
+            border-radius: 7.5px;
+        }
+    }
+
     #root {
+        width: 1336px;
+        margin: 0 auto;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1336px;
+            height: 100px;
+            background-color: #FFFFFF;
+            margin-bottom: 10px;
+
+            .logo {
+                width: 150px;
+                height: 80px;
+                text-align: center;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 50px;
+                }
+            }
+
+            .search {
+                width: 40%;
+                display: flex;
+                align-items: center;
+                padding: 14px;
+                border-radius: 8px;
+                background: #f6f6f6;
+                transition: box-shadow 0.25s;
+
+                &:focus-within {
+                    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+                }
+
+                &:hover {
+                    cursor: var(--cursorText);
+                }
+
+                input {
+                    font-size: 16px;
+                    font-family: "Lexend", sans-serif;
+                    color: #333333;
+                    outline: none;
+                    border: none;
+                    background: transparent;
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .main {
         width: 338px;
         height: 408.9px;
         background-color: #fff;
@@ -46,7 +116,7 @@ body {
 
             span {
                 color: #34a853;
-                cursor: pointer;
+                cursor: var(--cursorPointer);
                 user-select: none;
             }
         }
@@ -120,7 +190,6 @@ body {
                         font-family: Source Sans Pro;
                         font-size: 14px;
                         border: 1px solid #d4d1d3;
-                        border-radius: 7px;
                         height: 40px;
                         padding: 0 10px;
 
@@ -136,7 +205,7 @@ body {
                             }
 
                             &:hover {
-                                cursor: pointer;
+                                cursor: var(--cursorPointer);
                             }
                         }
 

@@ -7,70 +7,83 @@ function App() {
 
   return (
     <>
-      <h2>
-        Log In
-      </h2>
-      <div className="login_text">
-        Don't have an account?
-        <span>
-          Sign up
-        </span>
-      </div>
-      <div className="login_container">
-        <div className="login_buttons">
-          <button>
-            <div className="provider_text">
-              Google
-            </div>
-            <div className="provider_logo">
-              <img src="https://i.ibb.co/LQzDdyY/Google.png" alt="Google" />
-            </div>
-          </button>
-          <button>
-            <div className="provider_text">
-              Facebook
-            </div>
-            <div className="provider_logo">
-              <img src="https://i.ibb.co/8zRMdWP/Facebook.png" alt="Facebook" />
-            </div>
-          </button>
-          <button>
-            <div className="provider_text">
-              Github
-            </div>
-            <div className="provider_logo">
-              <img src="https://i.ibb.co/0nNGnKX/Github.png" alt="Github" />
-            </div>
-          </button>
-          <button>
-            <div className="provider_text">
-              Feide
-            </div>
-            <div className="provider_logo">
-              <img src="https://i.ibb.co/xMY6hWP/Feide.png" alt="Feide" />
-            </div>
-          </button>
+      <div className="header">
+        <div className="logo">
+          <a href="./">
+            Logo
+          </a>
         </div>
-        <p>
-          OR
-        </p>
+        <div className="search">
+          <input type="text" name="" id="" />
+          <span class="search-icon material-symbols-outlined">search</span>
+        </div>
       </div>
-      <div className="content">
-        <form action="">
-          <div className="inputs">
-            <input type="text" placeholder='Email' />
-            <input type={showPassword ? 'text' : 'password'} placeholder='Password' />
-            <input type="checkbox" checked={showPassword} onChange={() => setShowPassword(!showPassword)} />
-          </div>
-          <div className="buttons">
-            <button type='button'>
-              Forgot Password?
+      <div className="main">
+        <h2>
+          Log In
+        </h2>
+        <div className="login_text">
+          Don't have an account?
+          <span>
+            Sign up
+          </span>
+        </div>
+        <div className="login_container">
+          <div className="login_buttons">
+            <button>
+              <div className="provider_text">
+                Google
+              </div>
+              <div className="provider_logo">
+                <img src="https://i.ibb.co/LQzDdyY/Google.png" alt="Google" />
+              </div>
             </button>
-            <button type='submit' className='primary'>
-              Login
+            <button>
+              <div className="provider_text">
+                Facebook
+              </div>
+              <div className="provider_logo">
+                <img src="https://i.ibb.co/8zRMdWP/Facebook.png" alt="Facebook" />
+              </div>
+            </button>
+            <button>
+              <div className="provider_text">
+                Github
+              </div>
+              <div className="provider_logo">
+                <img src="https://i.ibb.co/0nNGnKX/Github.png" alt="Github" />
+              </div>
+            </button>
+            <button>
+              <div className="provider_text">
+                Feide
+              </div>
+              <div className="provider_logo">
+                <img src="https://i.ibb.co/xMY6hWP/Feide.png" alt="Feide" />
+              </div>
             </button>
           </div>
-        </form>
+          <p>
+            OR
+          </p>
+        </div>
+        <div className="content">
+          <form action="">
+            <div className="inputs">
+              <input type="text" placeholder='Email' />
+              <input type={showPassword ? 'text' : 'password'} placeholder='Password' />
+              <input type="checkbox" checked={showPassword} onChange={() => setShowPassword(!showPassword)} />
+            </div>
+            <div className="buttons">
+              <button type='button'>
+                Forgot Password?
+              </button>
+              <button type='submit' className='primary'>
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );
