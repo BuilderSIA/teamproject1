@@ -19,6 +19,9 @@ function App() {
         </div>
       </div>
       <div className="main">
+        <button className="close">
+          <img src="https://i.ibb.co/ChZDfqD/close.png" alt="close" />
+        </button>
         <h2>
           Log In
         </h2>

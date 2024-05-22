@@ -4,6 +4,8 @@
           user-select: none;
   padding: 0;
   margin: 0;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -84,6 +86,16 @@ body .main {
   border-radius: 8px;
   padding: 3rem 3.5rem 5rem;
   margin: auto;
+  position: relative;
+}
+body .main .close {
+  position: absolute;
+  translate: 340px -20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  background: none;
+  border: none;
 }
 body .main h2 {
   font-size: 2rem;
