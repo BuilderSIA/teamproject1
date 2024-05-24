@@ -8,14 +8,16 @@ function App() {
   return (
     <>
       <div className="header">
+        <div className="nav-top">
         <div className="logo">
-          <a href="./">
+          <a href="./" alt="logo">
             Logo
           </a>
         </div>
         <div className="search">
           <input type="text" name="" id="" />
           <span class="search-icon material-symbols-outlined">search</span>
+        </div>
         </div>
       </div>
       <div className="main">
