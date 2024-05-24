@@ -43,6 +43,11 @@ body {
         width: 1336px;
         margin: 0 auto;
 
+        .ws-green {
+            background-color: #04aa6d;
+            color: #fff;
+        }
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -54,7 +59,7 @@ body {
 
             .nav-top {
                 display: flex;
-                // justify-content: space-between;
+                justify-content: space-between;
                 align-items: center;
                 width: 100%;
                 height: 56px;
@@ -103,6 +108,42 @@ body {
                         padding: 5px 15px;
 
                         width: 100%;
+                    }
+                }
+
+                .sign {
+                    margin-right: 20px;
+
+                    button {
+                        position: relative;
+                        height: 40px;
+                        border-radius: 25px;
+                        border: none;
+                        outline: none;
+                    }
+
+                    .signUp {
+                        width: 93px;
+                        z-index: 1;
+
+                        &:hover {
+                            background-color: #059862 !important;
+                            color: white !important;
+                        }
+                    }
+
+                    .login {
+                        width: 112px;
+                        text-align: right;
+                        padding-right: 23px;
+                        margin-left: -40px;
+                        background-color: #D9EEE1 !important;
+                        z-index: 0;
+
+                        &:hover {
+                            background-color: #059862 !important;
+                            color: #ffffff !important;
+                        }
                     }
                 }
             }
@@ -227,7 +268,7 @@ body {
                             height: 15px;
                             position: absolute;
                             right: 2px;
-                            bottom: 10px;
+                            bottom: 12px;
 
                             &:focus {
                                 outline: none;
@@ -260,11 +301,6 @@ body {
                         border-radius: 7px;
                         font-weight: 600;
                         background-color: #fff;
-                    }
-
-                    .primary {
-                        background-color: #04aa6d;
-                        color: #fff;
                     }
                 }
             }

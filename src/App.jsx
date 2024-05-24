@@ -9,15 +9,23 @@ function App() {
     <>
       <div className="header">
         <div className="nav-top">
-        <div className="logo">
-          <a href="./" alt="logo">
-            Logo
-          </a>
-        </div>
-        <div className="search">
-          <input type="text" name="" id="" />
-          <span class="search-icon material-symbols-outlined">search</span>
-        </div>
+          <div className="logo">
+            <a href="./" alt="logo">
+              Logo
+            </a>
+          </div>
+          <div className="search">
+            <input type="text" name="" id="" />
+            <span class="search-icon material-symbols-outlined">search</span>
+          </div>
+          <div className="sign">
+            <button className='ws-green signUp'>
+              Sign Up
+            </button>
+            <button className='login'>
+              Log in
+            </button>
+          </div>
         </div>
       </div>
       <div className="main">
@@ -83,7 +91,7 @@ function App() {
               <button type='button'>
                 Forgot Password?
               </button>
-              <button type='submit' className='primary'>
+              <button type='submit' className='ws-green'>
                 Login
               </button>
             </div>

@@ -38,6 +38,10 @@ body #root {
   width: 1336px;
   margin: 0 auto;
 }
+body #root .ws-green {
+  background-color: #04aa6d;
+  color: #fff;
+}
 body #root .header {
   display: flex;
   justify-content: space-between;
@@ -49,6 +53,7 @@ body #root .header {
 }
 body #root .header .nav-top {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 56px;
@@ -92,6 +97,36 @@ body #root .header .nav-top .search input {
   flex: 1;
   padding: 5px 15px;
   width: 100%;
+}
+body #root .header .nav-top .sign {
+  margin-right: 20px;
+}
+body #root .header .nav-top .sign button {
+  position: relative;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+body #root .header .nav-top .sign .signUp {
+  width: 93px;
+  z-index: 1;
+}
+body #root .header .nav-top .sign .signUp:hover {
+  background-color: #059862 !important;
+  color: white !important;
+}
+body #root .header .nav-top .sign .login {
+  width: 112px;
+  text-align: right;
+  padding-right: 23px;
+  margin-left: -40px;
+  background-color: #D9EEE1 !important;
+  z-index: 0;
+}
+body #root .header .nav-top .sign .login:hover {
+  background-color: #059862 !important;
+  color: #ffffff !important;
 }
 body .main {
   width: 338px;
@@ -202,7 +237,7 @@ body .main .content form .inputs input[type=checkbox] {
   height: 15px;
   position: absolute;
   right: 2px;
-  bottom: 10px;
+  bottom: 12px;
 }
 body .main .content form .inputs input[type=checkbox]:focus {
   outline: none;
@@ -229,10 +264,6 @@ body .main .content form .buttons button {
   border-radius: 7px;
   font-weight: 600;
   background-color: #fff;
-}
-body .main .content form .buttons .primary {
-  background-color: #04aa6d;
-  color: #fff;
 }
 
 @media screen and (max-width: 942px) {
