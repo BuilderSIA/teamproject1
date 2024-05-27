@@ -14,7 +14,9 @@ const Login = ({
     return (
         <div className="sign">
             <button className="close" onClick={() => setLogin(false)}>
-                <img src="https://i.ibb.co/ChZDfqD/close.png" alt="close" />
+                <Link to={'/'}>
+                    <img src="https://i.ibb.co/ChZDfqD/close.png" alt="close" />
+                </Link>
             </button>
             <h2>
                 Log In
@@ -22,7 +24,9 @@ const Login = ({
             <div className="login_text">
                 Don't have an account?
                 <button onClick={() => { setSignin(true); setLogin(false); }}>
-                    Sign up
+                    <Link to={'/signup'}>
+                        Sign up
+                    </Link>
                 </button>
             </div>
             <div className="login_container">

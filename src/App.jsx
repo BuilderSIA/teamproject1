@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   const [showPassword, setShowPassword] = useState(false);
@@ -49,38 +50,41 @@ function App() {
   return (
     <>
       <Navbar setSignin={setSignin} setLogin={setLogin} />
-      {signin && (
-        <Signup
-          showPassword={showPassword}
-          setShowPassword={setShowPassword}
-          email={email}
-          setEmail={setEmail}
-          password={password}
-          setPassword={setPassword}
-          firstName={firstName}
-          setFirstName={setFirstName}
-          lastName={lastName}
-          setLastName={setLastName}
-          signin={signin}
-          setSignin={setSignin}
-          handleSignUp={handleSignUp}
-          setLogin={setLogin}
+      <Routes>
+        <Route path='/signup' element={signin && (
+          <Signup
+            showPassword={showPassword}
+            setShowPassword={setShowPassword}
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+            firstName={firstName}
+            setFirstName={setFirstName}
+            lastName={lastName}
+            setLastName={setLastName}
+            signin={signin}
+            setSignin={setSignin}
+            handleSignUp={handleSignUp}
+            setLogin={setLogin}
+          />
+        )}
         />
-      )}
-      {login && (
-        <Login
-          showPassword={showPassword}
-          setShowPassword={setShowPassword}
-          email={email}
-          setEmail={setEmail}
-          password={password}
-          setPassword={setPassword}
-          login={login}
-          setLogin={setLogin}
-          handleLogin={handleLogin}
-          setSignin={setSignin}
-        />
-      )}
+        <Route path='/login' element={login && (
+          <Login
+            showPassword={showPassword}
+            setShowPassword={setShowPassword}
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+            login={login}
+            setLogin={setLogin}
+            handleLogin={handleLogin}
+            setSignin={setSignin}
+          />
+        )} />
+      </Routes>
     </>
   );
 }

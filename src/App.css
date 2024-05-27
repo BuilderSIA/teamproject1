@@ -115,13 +115,18 @@ body #root .header .nav-top .mode {
   padding: 10px 8px;
 }
 body #root .header .nav-top .mode i {
-  font: normal normal normal 14px/1 fontawesome;
+  content: "\e80b";
+  font: normal normal normal 14px/1 FontAwesome;
   font-style: normal !important;
   display: inline-block;
   width: 18px;
   height: 18px;
   font-size: 18px;
   text-align: center;
+  font-family: FontAwesome;
+}
+body #root .header .nav-top .mode i::before {
+  content: "\e80b";
 }
 body #root .header .nav-top .signButtons {
   margin-right: 20px;

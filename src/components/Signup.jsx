@@ -1,30 +1,32 @@
-const Signup = ({
+import { Link } from "react-router-dom";
+
+const Login = ({
     showPassword,
     setShowPassword,
     email,
     setEmail,
     password,
     setPassword,
-    firstName,
-    setFirstName,
-    lastName,
-    setLastName,
-    signin,
-    setSignin,
-    handleSignUp,
-    setLogin
+    login,
+    setLogin,
+    handleLogin,
+    setSignin
 }) => {
     return (
         <div className="sign">
-            <button className="close" onClick={() => setSignin(false)}>
-                <img src="https://i.ibb.co/ChZDfqD/close.png" alt="close" />
-            </button>
-            <h2>Sign Up</h2>
-            <div className="login_text">
-                Already have an account?
-                <button onClick={() => { setLogin(true); setSignin(false); }}>
-                    Log in
+            <Link to={'/'}>
+                <button className="close" onClick={() => setLogin(false)}>
+                    <img src="https://i.ibb.co/ChZDfqD/close.png" alt="close" />
                 </button>
+            </Link>
+            <h2>Log In</h2>
+            <div className="login_text">
+                Don't have an account?
+                <Link to={'/signup'}>
+                    <button onClick={() => { setSignin(true); setLogin(false); }}>
+                        Sign up
+                    </button>
+                </Link>
             </div>
             <div className="login_container">
                 <div className="login_buttons">
@@ -56,7 +58,7 @@ const Signup = ({
                 <p>OR</p>
             </div>
             <div className="content">
-                <form onSubmit={(e) => { e.preventDefault(); handleSignUp(); }}>
+                <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
                     <div className="inputs">
                         <input
                             type="text"
@@ -70,33 +72,27 @@ const Signup = ({
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <input
-                            type="checkbox"
-                            checked={showPassword}
-                            onChange={() => setShowPassword(!showPassword)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="First Name"
-                            value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Last Name"
-                            value={lastName}
-                            onChange={(e) => setLastName(e.target.value)}
-                        />
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={showPassword}
+                                onChange={() => setShowPassword(!showPassword)}
+                            />
+                            Show Password
+                        </label>
                     </div>
                     <div className="buttons">
-                        <button type="submit" className="ws-green">
-                            Sign Up
+                        <button type='button'>
+                            Forgot Password?
+                        </button>
+                        <button type='submit' className='ws-green'>
+                            Login
                         </button>
                     </div>
                 </form>
             </div>
         </div>
     );
-};
+}
 
-export default Signup;
+export default Login;

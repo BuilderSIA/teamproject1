@@ -1,3 +1,10 @@
+// @font-face {
+//     font-family: 'FontAwesome';
+//     src: url('https://www.w3schools.com/lib/fonts/fontawesome.woff2?14663396') format('woff2');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
 * {
     user-select: none;
     padding: 0;
@@ -127,13 +134,18 @@ body {
                     padding: 10px 8px;
 
                     i {
-                        font: normal normal normal 14px / 1 fontawesome;
+                        content: '\e80b';
+                        font: normal normal normal 14px / 1 FontAwesome;
                         font-style: normal !important;
                         display: inline-block;
                         width: 18px;
                         height: 18px;
                         font-size: 18px;
                         text-align: center;
+                        font-family: FontAwesome;
+                        &::before{
+                            content: '\e80b';
+                        }
                     }
                 }
 
