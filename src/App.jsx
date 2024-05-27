@@ -1,105 +1,88 @@
-import { useState } from 'react'
-import './App.css'
+import { useEffect, useState } from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Signup from './components/Signup';
+import Login from './components/Login';
 
 function App() {
-  // const [email, setEmail] = useState(0);
   const [showPassword, setShowPassword] = useState(false);
+  const [newUser, setNewUser] = useState({});
+  const [user, setUser] = useState({});
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [signin, setSignin] = useState(false);
+  const [login, setLogin] = useState(false);
+
+  const handleSignUp = () => {
+    let newUser = {
+      Email: email,
+      Password: password,
+      FirstName: firstName,
+      LastName: lastName
+    };
+    setNewUser(newUser);
+  };
+
+  useEffect(() => {
+    if (Object.keys(newUser).length > 0) {
+      localStorage.setItem('newUser', JSON.stringify(newUser));
+    }
+  }, [newUser]);
+
+
+  const handleLogin = () => {
+    let newUser = {
+      Email: email,
+      Password: password
+    };
+    setUser(newUser);
+  };
+
+  useEffect(() => {
+    if (Object.keys(user).length > 0) {
+      localStorage.setItem('user', JSON.stringify(user));
+    }
+  }, [user]);
 
   return (
     <>
-      <div className="header">
-        <div className="nav-top">
-          <div className="logo">
-            <a href="./" alt="logo">
-              Logo
-            </a>
-          </div>
-          <div className="search">
-            <input type="text" name="" id="" />
-            <span class="search-icon material-symbols-outlined">search</span>
-          </div>
-          <div className="sign">
-            <button className='ws-green signUp'>
-              Sign Up
-            </button>
-            <button className='login'>
-              Log in
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="main">
-        <button className="close">
-          <img src="https://i.ibb.co/ChZDfqD/close.png" alt="close" />
-        </button>
-        <h2>
-          Log In
-        </h2>
-        <div className="login_text">
-          Don't have an account?
-          <span>
-            Sign up
-          </span>
-        </div>
-        <div className="login_container">
-          <div className="login_buttons">
-            <button>
-              <div className="provider_text">
-                Google
-              </div>
-              <div className="provider_logo">
-                <img src="https://i.ibb.co/LQzDdyY/Google.png" alt="Google" />
-              </div>
-            </button>
-            <button>
-              <div className="provider_text">
-                Facebook
-              </div>
-              <div className="provider_logo">
-                <img src="https://i.ibb.co/8zRMdWP/Facebook.png" alt="Facebook" />
-              </div>
-            </button>
-            <button>
-              <div className="provider_text">
-                Github
-              </div>
-              <div className="provider_logo">
-                <img src="https://i.ibb.co/0nNGnKX/Github.png" alt="Github" />
-              </div>
-            </button>
-            <button>
-              <div className="provider_text">
-                Feide
-              </div>
-              <div className="provider_logo">
-                <img src="https://i.ibb.co/xMY6hWP/Feide.png" alt="Feide" />
-              </div>
-            </button>
-          </div>
-          <p>
-            OR
-          </p>
-        </div>
-        <div className="content">
-          <form action="">
-            <div className="inputs">
-              <input type="text" placeholder='Email' />
-              <input type={showPassword ? 'text' : 'password'} placeholder='Password' />
-              <input type="checkbox" checked={showPassword} onChange={() => setShowPassword(!showPassword)} />
-            </div>
-            <div className="buttons">
-              <button type='button'>
-                Forgot Password?
-              </button>
-              <button type='submit' className='ws-green'>
-                Login
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <Navbar setSignin={setSignin} setLogin={setLogin} />
+      {signin && (
+        <Signup
+          showPassword={showPassword}
+          setShowPassword={setShowPassword}
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          firstName={firstName}
+          setFirstName={setFirstName}
+          lastName={lastName}
+          setLastName={setLastName}
+          signin={signin}
+          setSignin={setSignin}
+          handleSignUp={handleSignUp}
+          setLogin={setLogin}
+        />
+      )}
+      {login && (
+        <Login
+          showPassword={showPassword}
+          setShowPassword={setShowPassword}
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          login={login}
+          setLogin={setLogin}
+          handleLogin={handleLogin}
+          setSignin={setSignin}
+        />
+      )}
     </>
   );
 }
 
-export default App
+export default App;
