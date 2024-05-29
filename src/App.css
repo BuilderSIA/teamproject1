@@ -78,6 +78,26 @@ body #root .header .nav-top .logo a {
   height: 100%;
   font-size: 40px;
 }
+body #root .header .nav-top .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+}
+body #root .header .nav-top .bar-item {
+  display: block;
+  width: 100%;
+  padding: 19px;
+  background-color: white;
+  color: black;
+}
+body #root .header .nav-top .bar-item:hover {
+  background-color: #04AA6D !important;
+  color: white !important;
+}
 body #root .header .nav-top .search {
   width: 11.004%;
   height: 16px;
@@ -110,23 +130,6 @@ body #root .header .nav-top .search input::-moz-placeholder {
 }
 body #root .header .nav-top .search input::placeholder {
   font-style: italic;
-}
-body #root .header .nav-top .mode {
-  padding: 10px 8px;
-}
-body #root .header .nav-top .mode i {
-  content: "\e80b";
-  font: normal normal normal 14px/1 FontAwesome;
-  font-style: normal !important;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  font-size: 18px;
-  text-align: center;
-  font-family: FontAwesome;
-}
-body #root .header .nav-top .mode i::before {
-  content: "\e80b";
 }
 body #root .header .nav-top .signButtons {
   margin-right: 20px;
@@ -309,8 +312,28 @@ body::-webkit-scrollbar {
     left: 0;
   }
 }
+@media screen and (max-width: 1000px) {
+  body {
+    zoom: 85%;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    zoom: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  body {
+    zoom: 50%;
+  }
+}
 @media screen and (max-width: 500px) {
   body {
-    zoom: 55%;
+    zoom: 35%;
+  }
+}
+@media screen and (max-width: 300px) {
+  body {
+    zoom: 25%;
   }
 }/*# sourceMappingURL=App.css.map */

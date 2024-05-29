@@ -5,16 +5,27 @@ const Navbar = ({ setSignin, setLogin }) => {
         <div className="header">
             <div className="nav-top">
                 <div className="logo">
-                    <Link to={'/'}>
+                    <a href="./">
                         <img src="https://picsum.photos/75/28" alt="Logo" />
-                    </Link>
+                    </a>
                 </div>
+                <nav className="bar">
+                    <Link to={'/'} className="bar-item">
+                        Home
+                    </Link>
+                    <Link to={'/profile'} className="bar-item">
+                        Profile
+                    </Link>
+                    <Link to={'/about'} className="bar-item">
+                        About
+                    </Link>
+                    <Link to={'/contact'} className="bar-item">
+                        Contact
+                    </Link>
+                </nav>
                 <div className="search">
                     <input type="search" placeholder="Search…" />
                     <span className="search-icon material-symbols-outlined">search</span>
-                </div>
-                <div className="mode">
-                    <i></i>
                 </div>
                 <div className="signButtons">
                     <Link to={'/signup'}>

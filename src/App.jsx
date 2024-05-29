@@ -51,7 +51,7 @@ function App() {
     <>
       <Navbar setSignin={setSignin} setLogin={setLogin} />
       <Routes>
-        <Route path='/signup' element={signin && (
+        <Route path='/signup' element={
           <Signup
             showPassword={showPassword}
             setShowPassword={setShowPassword}
@@ -68,9 +68,9 @@ function App() {
             handleSignUp={handleSignUp}
             setLogin={setLogin}
           />
-        )}
+        }
         />
-        <Route path='/login' element={login && (
+        <Route path='/login' element={
           <Login
             showPassword={showPassword}
             setShowPassword={setShowPassword}
@@ -83,7 +83,7 @@ function App() {
             handleLogin={handleLogin}
             setSignin={setSignin}
           />
-        )} />
+        } />
       </Routes>
     </>
   );
