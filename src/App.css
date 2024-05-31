@@ -161,6 +161,17 @@ body #root .header .nav-top .signButtons .login:hover {
   background-color: #059862 !important;
   color: var(--grayscale-gs-white) !important;
 }
+body #root .main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+body #root .main img {
+  width: 200px;
+  height: 300px;
+}
 body .sign {
   width: 338px;
   background-color: var(--grayscale-gs-white);
@@ -292,7 +303,10 @@ body .sign .content form .buttons {
   justify-content: space-between;
   margin-top: 20px;
 }
-body .sign .content form .buttons button {
+body .sign .content form .buttons a {
+  display: contents;
+}
+body .sign .content form .buttons a button {
   width: 167px;
   height: 40px;
   display: flex;

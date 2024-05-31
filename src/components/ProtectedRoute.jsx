@@ -1,6 +1,6 @@
 
-const ProtectedRoute = ({ user, children }) => {
-    if (user.username) {
+const ProtectedRoute = ({ newUser, children }) => {
+    if (newUser.Email) {
         return children;
     } else {
         return (
