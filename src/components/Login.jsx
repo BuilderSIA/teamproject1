@@ -91,12 +91,14 @@ const Login = ({
                         />
                     </div>
                     <div className="buttons">
-                        <button type='button'>
-                            Forgot Password?
-                        </button>
-                        <button type='submit' className='ws-green'>
-                            Login
-                        </button>
+                        <Link to={'/'}>
+                            <button type='button'>
+                                Forgot Password?
+                            </button>
+                            <button type='submit' className='ws-green'>
+                                Login
+                            </button>
+                        </Link>
                     </div>
                 </form>
             </div>

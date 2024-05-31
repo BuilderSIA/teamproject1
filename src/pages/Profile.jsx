@@ -1,9 +1,14 @@
 
-const Profile = ({setUser}) => {
+const Profile = ({ setUser }) => {
   return (
-    <div>
-      
-    </div>
+      <div>
+          <h2>
+              Profile
+          </h2>
+          <button onClick={() => setUser({})}>
+              Log out
+          </button>
+      </div>
   )
 }
 

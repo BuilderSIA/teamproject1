@@ -95,9 +95,11 @@ const Signup = ({
                         />
                     </div>
                     <div className="buttons">
-                        <button type='button' className='ws-green' onClick={handleSignUp}>
-                            Sign Up
-                        </button>
+                        <Link to={'/'}>
+                            <button type='button' className='ws-green' onClick={handleSignUp}>
+                                Sign Up
+                            </button>
+                        </Link>
                     </div>
                 </form>
             </div>

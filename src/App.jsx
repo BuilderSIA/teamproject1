@@ -6,6 +6,7 @@ import Login from './components/Login';
 import { Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './pages/Profile';
+import Home from './pages/Home';
 
 function App() {
   const [showPassword, setShowPassword] = useState(false);
@@ -53,6 +54,7 @@ function App() {
     <>
       <Navbar setSignin={setSignin} setLogin={setLogin} />
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/signup' element={
           <Signup
             showPassword={showPassword}
@@ -88,9 +90,8 @@ function App() {
         } />
         <Route path='/profile' element={
           <ProtectedRoute user={user}>
-            <Profile setUser={setUser}/>
-          </ProtectedRoute>
-        } />
+            <Profile setUser={setUser} />
+          </ProtectedRoute>} />
       </Routes>
       {/* <iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-h062m4g0ijc0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LesdI0mAAAAAOsL4S5ZsqGmaW5VTw6z8bc7_maZ&amp;co=aHR0cHM6Ly9hZG1pbi5mb29keW1hbi5vcmc6NDQz&amp;hl=uz&amp;type=image&amp;v=joHA60MeME-PNviL59xVH9zs&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=d9uq0elx4ic6"></iframe> */}
     </>
